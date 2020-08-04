@@ -95,6 +95,15 @@
         "name": "commands"
     },
     {
+        "description": "Illustrates how an extension can register URL-matching content scripts at runtime.",
+        "javascript_apis": [
+            "contentScripts.register",
+            "runtime.onMessage",
+            "runtime.sendMessage"
+        ],
+        "name": "content-script-register"
+    },
+    {
         "description": "Add a context menu option to links to copy the link to the clipboard, as plain text and as a link in rich HTML.",
         "javascript_apis": [
             "contextMenus.create",
@@ -526,7 +535,7 @@
         "name": "theme-switcher"
     },
     {
-        "description": "A collection of themes illustrating:<ul><li>weta_fade: a basic theme employing a single image specified in <code>headerURL:</code>.</li><li>weta_fade_chrome: the weta_fade theme implemented with Chrome compatible manifest keys.</li><li>weta_tiled: a theme using a tiled image.</li><li>weta_mirror: a theme using multiple images and aligning those images in the header.</li><li>animated: use of an animated PNG.</li></ul>",
+        "description": "A collection of themes illustrating:<ul><li>weta_fade: a basic theme employing a single image specified in <code>theme_frame:</code>.</li><li>weta_fade_chrome: the weta_fade theme implemented with Chrome compatible manifest keys.</li><li>weta_tiled: a theme using a tiled image.</li><li>weta_mirror: a theme using multiple images and aligning those images in the header.</li><li>animated: use of an animated PNG.</li></ul>",
         "javascript_apis": [],
         "name": "themes"
     },
@@ -546,13 +555,13 @@
         "name": "user-agent-rewriter"
     },
     {
-        "description": "Illustrates how an extension can register URL-matching content scripts at runtime.",
+        "description": "Illustrates how an extension can register URL-matching user scripts at runtime.",
         "javascript_apis": [
-            "contentScripts.register",
+            "userScripts.register",
             "runtime.onMessage",
             "runtime.sendMessage"
         ],
-        "name": "user-script"
+        "name": "user-script-register"
     },
     {
         "description": "Demonstrates how to use webpack to package npm modules in an extension.",
@@ -573,5 +582,10 @@
             "windows​.Window"
         ],
         "name": "window-manipulator"
+    },
+    {
+        "description": "Demonstrates the use of protocol handlers.",
+        "javascript_apis": [],
+        "name": "open-irc-links"
     }
 ]
